@@ -9,6 +9,7 @@
 import Foundation
 
 extension FileManager {
+
     public class var homeDir: String! {
         return NSHomeDirectory()
     }

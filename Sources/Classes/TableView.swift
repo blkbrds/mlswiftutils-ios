@@ -9,6 +9,7 @@
 import UIKit
 
 open class TableView: UITableView {
+
     open var allowHeaderViewsToFloat: Bool = false
     open var allowFooterViewsToFloat: Bool = false
 

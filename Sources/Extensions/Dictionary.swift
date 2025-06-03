@@ -9,6 +9,7 @@
 import Foundation
 
 extension Dictionary {
+
     public var allKeys: [Key] {
         return Array(keys)
     }

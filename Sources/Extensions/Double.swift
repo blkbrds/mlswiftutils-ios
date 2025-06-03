@@ -9,6 +9,7 @@
 import Foundation
 
 extension Double {
+
     public var abs: Double {
         return Foundation.fabs(self)
     }
@@ -35,8 +36,7 @@ extension Double {
 
     public static func random(min: Double = 0, max: Double) -> Double {
         let diff = max - min
-        let rand = Double(arc4random() % (UInt32(RAND_MAX) + 1))
-        return ((rand / Double(RAND_MAX)) * diff) + min
+        return Double.random(in: min...max)
     }
 
     public func distance(_ precision: Int = -1, meter: String = "m", kilometer: String = "km") -> String { // precision < 0: Auto

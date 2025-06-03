@@ -10,6 +10,7 @@ import XCTest
 @testable import SwiftUtils
 
 class StringTests: XCTestCase {
+
     func test_initWithClass() {
         let clazz = String(describing: UIViewController.self)
         XCTAssertEqual(clazz, "UIViewController")

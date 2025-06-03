@@ -10,9 +10,10 @@ import XCTest
 @testable import SwiftUtils
 
 class BoolTests: XCTestCase {
+
     func test_toggle() {
         var bool = true
-       _ = bool.toggle()
+        bool.toggle()
         XCTAssertFalse(bool)
     }
 }

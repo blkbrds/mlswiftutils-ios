@@ -9,6 +9,7 @@
 import UIKit
 
 extension CGPoint {
+
     public var isZero: Bool {
         return x == 0 && y == 0
     }
@@ -121,6 +122,7 @@ public func / (lhs: CGPoint, rhs: CGFloat) -> CGPoint {
 }
 
 extension CGSize {
+
     public init(size: CGFloat) {
         self.init(width: size, height: size)
     }
@@ -171,6 +173,7 @@ public func / (lhs: CGSize, rhs: CGFloat) -> CGSize {
 }
 
 extension CGVector {
+
     public var isZero: Bool {
         return dx == 0 && dy == 0
     }
@@ -217,6 +220,7 @@ public func /= (lhs: inout CGVector, rhs: CGFloat) -> CGVector {
 }
 
 extension CGRect {
+
     public var mid: CGPoint {
         return CGPoint(x: midX, y: midY)
     }

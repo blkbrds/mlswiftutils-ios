@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIImage {
+
     public func scaleToSize(_ newSize: CGSize, aspectFill: Bool = false) -> UIImage {
         let scaleFactorWidth = newSize.width / size.width
         let scaleFactorHeight = newSize.height / size.height

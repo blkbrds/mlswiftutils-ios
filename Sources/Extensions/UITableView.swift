@@ -9,6 +9,7 @@
 import UIKit
 
 extension UITableView {
+
     override open var delaysContentTouches: Bool {
         didSet {
             for view in subviews {
@@ -36,7 +37,7 @@ extension UITableView {
         scrollToRow(at: path, at: .top, animated: animated)
         let delay = (animated ? 0.2 : 0.0) * Double(NSEC_PER_SEC)
         let time = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: time, execute: { () -> Void in
+        DispatchQueue.main.asyncAfter(deadline: time, execute: {
             if self.contentOffset.y != offset {
                 self.scrollsToBottom(false)
             }
@@ -83,6 +84,7 @@ extension UITableView {
 }
 
 extension UITableViewCell {
+
     public func setSeparatorInsets(_ insets: UIEdgeInsets) {
         separatorInset = insets
         layoutMargins = insets

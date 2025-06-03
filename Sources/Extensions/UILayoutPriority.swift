@@ -9,6 +9,7 @@
 import UIKit
 
 extension UILayoutPriority {
+
     public static var Required: Float { return 1000.0 }
     public static var DefaultHigh: Float { return 750.0 }
     public static var FittingSizeLevel: Float { return 500.0 }

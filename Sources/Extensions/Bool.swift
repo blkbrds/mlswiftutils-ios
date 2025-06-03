@@ -9,6 +9,7 @@
 import Foundation
 
 extension Bool {
+
     public func toInt() -> Int {
         return self ? 1 : 0
     }

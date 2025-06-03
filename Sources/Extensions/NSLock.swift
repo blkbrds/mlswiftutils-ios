@@ -9,6 +9,7 @@
 import UIKit
 
 extension NSLock {
+
     public func sync(_ block: () -> Void) {
         let locked = `try`()
         block()

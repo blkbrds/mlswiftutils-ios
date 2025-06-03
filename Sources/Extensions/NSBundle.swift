@@ -13,6 +13,7 @@ public let kCFBundleNameKey = "CFBundleName"
 public let kCFBundleShortVersionKey = "CFBundleShortVersionString"
 
 extension Bundle {
+
     public var name: String {
         guard let info = infoDictionary else { return "" }
         return info[kCFBundleDisplayNameKey] as? String ?? info[kCFBundleNameKey] as? String ?? ""
