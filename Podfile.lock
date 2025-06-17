@@ -1,0 +1,23 @@
+PODS:
+  - MLSwiftUtils (5.0.0)
+  - SwiftLint (0.59.1)
+
+DEPENDENCIES:
+  - MLSwiftUtils (from `./`)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - SwiftLint
+
+EXTERNAL SOURCES:
+  MLSwiftUtils:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  MLSwiftUtils: 57d103407910f01c648d41a0cf7b6b8c57f7bad5
+  SwiftLint: 3d48e2fb2a3468fdaccf049e5e755df22fb40c2c
+
+PODFILE CHECKSUM: 0ad34f8cb20fc367df151910b130163c59a25d77
+
+COCOAPODS: 1.15.2

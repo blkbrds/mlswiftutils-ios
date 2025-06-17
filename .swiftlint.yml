@@ -1,0 +1,13 @@
+# reporter: xcode
+disabled_rules:
+  - identifier_name
+excluded:
+  - Pods
+line_length: 300
+file_length: 1000
+function_body_length:
+  - 50
+  - 100
+type_body_length:
+  - 300
+  - 500
