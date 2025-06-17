@@ -1,27 +1,22 @@
 //
 //  ArrayTests.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 2/29/16.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
 //
 
 import XCTest
-@testable import SwiftUtils
+@testable import MLSwiftUtils
 
 class ArrayTests: XCTestCase {
-    let origin: [Int] = {
-        var numbers = [Int]()
-        for i in 0 ... 100_000 {
-            numbers.append(i)
-        }
-        return numbers
-    }()
+
+    let origin: [Int] = Array(1...100000)
 
     func test_shuffled() {
         var shuffled: [Int]!
-        self.measure { () -> Void in
-            shuffled = self.origin.shuffled()
+        measure {
+            shuffled = origin.shuffled()
         }
         let test = { (lhs: Int, rhs: Int) -> Bool in
             return lhs < rhs

@@ -1,14 +1,13 @@
-source 'https://github.com/CocoaPods/Specs.git'
-inhibit_all_warnings!
-platform :ios, '8.0'
+platform :ios, '14.0'
 use_frameworks!
+inhibit_all_warnings!
 
 target 'PodTest' do
-    pod 'SwiftUtils', :path => './'
+    pod 'MLSwiftUtils', :path => './'
 end
 
-target 'SwiftUtils' do
-    pod 'SwiftLint', '0.27.0'
+target 'MLSwiftUtils' do
+    pod 'SwiftLint'
     target 'Tests' do
         inherit! :search_paths
     end

@@ -1,6 +1,6 @@
 //
 //  RefreshControl.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 5/7/16.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -17,5 +17,4 @@ open class RefreshControl: UIRefreshControl {
         super.endRefreshing()
         scrollView?.isScrollEnabled = scrollEnabled
     }
-
 }

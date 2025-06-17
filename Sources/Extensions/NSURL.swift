@@ -1,6 +1,6 @@
 //
 //  NSURL.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/7/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -106,6 +106,7 @@ public enum HTTPStatus: Int {
 }
 
 extension HTTPStatus: CustomStringConvertible {
+
     public var description: String {
         switch self {
         case .continue: // 100
@@ -267,6 +268,7 @@ extension HTTPStatus: CustomStringConvertible {
 }
 
 extension NSError {
+
     public convenience init(domain: String? = nil, status: HTTPStatus, message: String? = nil) {
         let domain = domain ?? Bundle.main.bundleIdentifier ?? ""
         let userInfo: [String: String] = [NSLocalizedDescriptionKey: message ?? status.description]
@@ -281,6 +283,7 @@ extension NSError {
 }
 
 extension URL {
+
     public var imageRequest: NSMutableURLRequest {
         let request = NSMutableURLRequest(url: self)
         request.addValue("image/*", forHTTPHeaderField: "Accept")

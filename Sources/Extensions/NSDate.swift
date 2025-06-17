@@ -1,6 +1,6 @@
 //
 //  NSDate.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/7/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -11,6 +11,7 @@ import Foundation
 private var _defaultCalendar = Calendar.current
 
 extension Calendar {
+
     public static func setDefaultCalendar(_ defaultCalendar: Calendar) {
         _defaultCalendar = defaultCalendar
     }
@@ -21,6 +22,7 @@ extension Calendar {
 }
 
 extension TimeZone {
+
     public static var UTC: TimeZone {
         return TimeZone(abbreviation: "UTC")!
     }
@@ -29,6 +31,7 @@ extension TimeZone {
 private var _defaultLocale = Locale.current
 
 extension Locale {
+
     public static func setDefaultLocale(_ defaultLocale: Locale) {
         _defaultLocale = defaultLocale
     }
@@ -39,7 +42,7 @@ extension Locale {
 }
 
 extension DateComponents {
-   
+
     public init(year: Int, month: Int, day: Int, hour: Int = 0, minute: Int = 0, sec: Int = 0, nsec: Int = 0) {
         self.init()
         self.year = year

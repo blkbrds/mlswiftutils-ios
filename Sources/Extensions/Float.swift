@@ -1,6 +1,6 @@
 //
 //  Float.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/7/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -9,6 +9,7 @@
 import Foundation
 
 extension Float {
+
     public var abs: Float {
         return Foundation.fabsf(self)
     }
@@ -34,9 +35,7 @@ extension Float {
     }
 
     public static func random(min: Float = 0, max: Float) -> Float {
-        let diff = max - min
-        let rand = Float(arc4random() % (UInt32(RAND_MAX) + 1))
-        return ((rand / Float(RAND_MAX)) * diff) + min
+        return Float.random(in: min...max)
     }
 
     public func distance(_ precision: Int = -1) -> String { // precision < 0: Auto

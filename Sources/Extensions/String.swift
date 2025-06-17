@@ -1,6 +1,6 @@
 //
 //  String.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/7/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -10,34 +10,34 @@ import UIKit
 
 extension String {
 
-   public subscript(idx: Int) -> String? {
+    public subscript(idx: Int) -> String? {
         guard idx >= 0 && idx < count else { return nil }
         return String(self[index(startIndex, offsetBy: idx)])
     }
-    
+
     public subscript(idx: Int) -> Character? {
         guard idx >= 0 && idx < count else { return nil }
         return self[index(startIndex, offsetBy: idx)]
     }
-    
+
     public subscript(range: Range<Int>) -> String? {
         let lowerIndex = index(startIndex, offsetBy: max(0, range.lowerBound), limitedBy: endIndex) ?? endIndex
         let higherIndex = index(lowerIndex, offsetBy: range.upperBound - range.lowerBound, limitedBy: endIndex) ?? endIndex
         return String(self[lowerIndex..<higherIndex])
     }
-    
+
     public subscript(range: ClosedRange<Int>) -> String {
         let lowerIndex = index(startIndex, offsetBy: max(0, range.lowerBound), limitedBy: endIndex) ?? endIndex
         let higherIndex = index(lowerIndex, offsetBy: range.upperBound - range.lowerBound + 1, limitedBy: endIndex) ?? endIndex
         return String(self[lowerIndex..<higherIndex])
     }
-    
+
     public var length: Int {
         return count
     }
 
     // Regex
-    
+
     public func matches(_ pattern: String, ignoreCase: Bool = false) -> [NSTextCheckingResult]? {
         if let regex = NSRegularExpression.regex(pattern, ignoreCase: ignoreCase) {
             let range = NSRange(location: 0, length: length)
@@ -180,13 +180,13 @@ extension String {
     }
 
     // Returns a localized string, using the main bundle.
-    
+
     public func localized(_ comment: String = "") -> String {
         return NSLocalizedString(self, comment: comment)
     }
 
     /// Returns data with NSUTF8StringEncoding
-    
+
     public func toData() -> Data! {
         return data(using: String.Encoding.utf8)
     }
@@ -208,12 +208,14 @@ extension String {
 }
 
 extension Character {
+
     public var intValue: Int {
         return (String(self) as NSString).integerValue
     }
 }
 
 extension NSMutableAttributedString {
+
     public func append(string: String, attributes: [NSAttributedString.Key: Any]) {
         let str = NSMutableAttributedString(string: string, attributes: attributes)
         append(str)
@@ -221,6 +223,7 @@ extension NSMutableAttributedString {
 }
 
 extension NSMutableParagraphStyle {
+
     public class func defaultStyle() -> NSMutableParagraphStyle! {
         let style = NSMutableParagraphStyle()
         let defaultStyle = NSParagraphStyle.default

@@ -1,6 +1,6 @@
 //
 //  UIImage.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/23/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIImage {
+
     public func scaleToSize(_ newSize: CGSize, aspectFill: Bool = false) -> UIImage {
         let scaleFactorWidth = newSize.width / size.width
         let scaleFactorHeight = newSize.height / size.height

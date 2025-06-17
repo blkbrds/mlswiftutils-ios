@@ -1,6 +1,6 @@
 //
 //  Label.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/5/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -9,6 +9,7 @@
 import UIKit
 
 open class Label: UILabel {
+
     open var edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
     override open func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {

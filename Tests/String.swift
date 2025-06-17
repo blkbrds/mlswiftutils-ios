@@ -1,15 +1,16 @@
 //
 //  StringTests.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 7/28/16.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
 //
 
 import XCTest
-@testable import SwiftUtils
+@testable import MLSwiftUtils
 
 class StringTests: XCTestCase {
+
     func test_initWithClass() {
         let clazz = String(describing: UIViewController.self)
         XCTAssertEqual(clazz, "UIViewController")

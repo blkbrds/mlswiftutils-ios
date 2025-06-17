@@ -1,6 +1,6 @@
 //
 //  UIView.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/7/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -13,6 +13,7 @@ open class IntrinsicContentView: UIView {
 }
 
 extension UIView {
+
     public class func nib() -> UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
@@ -29,6 +30,7 @@ extension UIView {
 
 // MARK: Appearance
 extension UIView {
+
     public func clearSubViews() {
         backgroundColor = UIColor.clear
         for sub in subviews {
@@ -44,12 +46,12 @@ extension UIView {
     }
 
     public var corner: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
         set {
             layer.cornerRadius = newValue
             layer.masksToBounds = true
-        }
-        get {
-            return layer.cornerRadius
         }
     }
 
@@ -65,7 +67,8 @@ extension UIView {
         case right
     }
 
-    public func border(_ pos: BorderPostition, color: UIColor = UIColor.black, width: CGFloat = 0.5, insets: UIEdgeInsets = UIEdgeInsets.zero) {
+    public func border(_ pos: BorderPostition, color: UIColor = UIColor.black,
+                       width: CGFloat = 0.5, insets: UIEdgeInsets = .zero) {
         let rect: CGRect = {
             switch pos {
             case .top: return CGRect(x: 0, y: 0, width: frame.width, height: width)
@@ -87,7 +90,8 @@ extension UIView {
         addSubview(border)
     }
 
-    public func shadow(color: UIColor, offset: CGSize = CGSize(width: 0, height: 0), opacity: Float = 1.0, radius: CGFloat = 3.0) {
+    public func shadow(color: UIColor, offset: CGSize = CGSize(width: 0, height: 0),
+                       opacity: Float = 1.0, radius: CGFloat = 3.0) {
         layer.shadowColor = color.cgColor
         layer.shadowOffset = offset
         layer.shadowOpacity = opacity
@@ -99,6 +103,7 @@ extension UIView {
 
 // MARK: Layout
 extension UIView {
+
     public func removeSubviewsConstraints() {
         removeConstraints(constraints.filter({ (constraint: NSLayoutConstraint) -> Bool in
             let first = constraint.firstItem as? UIView

@@ -1,6 +1,6 @@
 //
 //  NSBundle.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 2/27/16.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -13,6 +13,7 @@ public let kCFBundleNameKey = "CFBundleName"
 public let kCFBundleShortVersionKey = "CFBundleShortVersionString"
 
 extension Bundle {
+
     public var name: String {
         guard let info = infoDictionary else { return "" }
         return info[kCFBundleDisplayNameKey] as? String ?? info[kCFBundleNameKey] as? String ?? ""

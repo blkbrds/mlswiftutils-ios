@@ -1,6 +1,6 @@
 //
 //  UIEdgeInsets.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/7/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIEdgeInsets {
+
     public init(inset: CGFloat) {
         self.init(top: inset, left: inset, bottom: inset, right: inset)
     }

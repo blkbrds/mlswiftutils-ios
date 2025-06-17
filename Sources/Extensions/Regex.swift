@@ -1,6 +1,6 @@
 //
 //  Regex.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/9/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -9,6 +9,7 @@
 import Foundation
 
 extension NSRegularExpression {
+
     public class func regex(_ pattern: String, ignoreCase: Bool = false) -> NSRegularExpression? {
         let options: NSRegularExpression.Options = ignoreCase ? [.caseInsensitive]: []
         let regex: NSRegularExpression?

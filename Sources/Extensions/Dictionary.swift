@@ -1,6 +1,6 @@
 //
 //  Dictionary.swift
-//  SwiftUtils
+//  MLSwiftUtils
 //
 //  Created by DaoNV on 10/7/15.
 //  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
@@ -9,6 +9,7 @@
 import Foundation
 
 extension Dictionary {
+
     public var allKeys: [Key] {
         return Array(keys)
     }
