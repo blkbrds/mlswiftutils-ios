@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  PodTest
 //
-//  Created by DaoNV on 9/21/16.
-//  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
+//  Created by Dai Ho on 9/21/16.
+//  Copyright © 2025 ML. All rights reserved.
 //
 
 import UIKit

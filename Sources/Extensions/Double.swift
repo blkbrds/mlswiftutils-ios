@@ -2,8 +2,8 @@
 //  Double.swift
 //  MLSwiftUtils
 //
-//  Created by DaoNV on 10/7/15.
-//  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
+//  Created by Dai Ho on 10/7/15.
+//  Copyright © 2025 ML. All rights reserved.
 //
 
 import Foundation
@@ -35,7 +35,6 @@ extension Double {
     }
 
     public static func random(min: Double = 0, max: Double) -> Double {
-        let diff = max - min
         return Double.random(in: min...max)
     }
 
