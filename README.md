@@ -4,7 +4,7 @@
 ## Requirements
 
 - iOS 14.0+
-Version 5.0.0: - Xcode 16 ~ Swift 5.0+
+Version 5.1.0: - Xcode 16 ~ Swift 5.0+
 
 ## Installation
 
@@ -24,7 +24,7 @@ To integrate MLSwiftUtils into your Xcode project using CocoaPods, specify it in
 platform :ios, '14.0'
 use_frameworks!
 
-pod 'MLSwiftUtils', '5.0.0'
+pod 'MLSwiftUtils', '5.1.0'
 ```
 
 Then, run the following command:
