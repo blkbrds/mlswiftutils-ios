@@ -2,8 +2,8 @@
 //  NSURL.swift
 //  MLSwiftUtils
 //
-//  Created by DaoNV on 10/7/15.
-//  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
+//  Created by Dai Ho on 10/7/15.
+//  Copyright © 2025 ML. All rights reserved.
 //
 
 import Foundation

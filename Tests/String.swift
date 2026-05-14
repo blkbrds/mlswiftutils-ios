@@ -2,8 +2,8 @@
 //  StringTests.swift
 //  MLSwiftUtils
 //
-//  Created by DaoNV on 7/28/16.
-//  Copyright © 2016 Asian Tech Co., Ltd. All rights reserved.
+//  Created by Dai Ho on 7/28/16.
+//  Copyright © 2025 ML. All rights reserved.
 //
 
 import XCTest
