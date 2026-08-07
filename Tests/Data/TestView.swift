@@ -8,4 +8,7 @@
 
 import UIKit
 
+// `@objc(TestView)` giữ tên runtime không phụ thuộc module, để `TestView.xib`
+// nạp được cả khi build bằng SwiftPM (module name khác với target của xcodeproj).
+@objc(TestView)
 class TestView: UIView { }

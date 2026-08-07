@@ -12,7 +12,12 @@ import XCTest
 class UIViewTests: XCTestCase {
 
     func test_loadNib() {
+        #if SWIFT_PACKAGE
+        // SwiftPM đóng gói resource vào bundle riêng thay vì bundle của test target.
+        let xib: TestView = TestView.loadNib(from: .module)
+        #else
         let xib: TestView = TestView.loadNib()
+        #endif
         XCTAssertNotNil(xib)
     }
 }

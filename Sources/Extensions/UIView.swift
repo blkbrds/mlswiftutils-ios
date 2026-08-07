@@ -18,9 +18,9 @@ extension UIView {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
 
-    public class func loadNib<T: UIView>() -> T {
+    public class func loadNib<T: UIView>(from bundle: Bundle? = nil) -> T {
         let name = String(describing: self)
-        let bundle = Bundle(for: T.self)
+        let bundle = bundle ?? Bundle(for: T.self)
         guard let xib = bundle.loadNibNamed(name, owner: nil, options: nil)?.first as? T else {
             fatalError("Cannot load nib named `\(name)`")
         }
